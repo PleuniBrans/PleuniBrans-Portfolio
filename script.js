@@ -22,3 +22,22 @@ document.querySelectorAll(
   el.style.transitionDelay = `${i * 0.05}s`;
   observer.observe(el);
 });
+
+const glow = document.createElement('div');
+glow.style.cssText = `
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(142, 162, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: left 0.0s ease, top 0.0s ease;
+`;
+document.body.appendChild(glow);
+
+document.addEventListener('mousemove', (e) => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+});
