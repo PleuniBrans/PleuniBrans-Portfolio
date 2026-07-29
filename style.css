@@ -392,3 +392,10 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 900px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
