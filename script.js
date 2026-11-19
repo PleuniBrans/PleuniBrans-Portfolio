@@ -3,7 +3,13 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nav = document.querySelector('.nav');
   var bar = document.querySelector('.progress');
-  var lines = document.querySelectorAll('.hero h1 .line span');
+  var lines = document.querySelectorAll('.hero h1 .line > span');
+  // de naam in losse letters knippen, zodat ze apart kunnen springen
+  lines.forEach(function (el) {
+    el.innerHTML = el.textContent.split('').map(function (ch) {
+      return '<span class="ch" aria-hidden="true">' + ch + '</span>';
+    }).join('');
+  });
   var pimg = document.querySelector('.p-hero-img img');
   var st = document.querySelector('.statement');
   var words = [];
