@@ -1,15 +1,14 @@
-// Scrollanimaties voor de portfolio
+// Beweging voor de portfolio. Alles blijft statisch als iemand 'minder beweging' heeft ingesteld.
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nav = document.querySelector('.nav');
   var bar = document.querySelector('.progress');
-  var photo = document.querySelector('.photo');
-  var sticker = document.querySelector('.sticker');
+  var lines = document.querySelectorAll('.hero h1 .line span');
   var pimg = document.querySelector('.p-hero-img img');
-  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var st = document.querySelector('.statement');
   var words = [];
 
-  // zin in woorden knippen, zodat ze bij het scrollen één voor één oplichten
-  var st = document.querySelector('.statement');
+  // de openingszin in woorden knippen, zodat ze bij het scrollen oplichten
   if (st) {
     var text = st.textContent.trim().split(/\s+/);
     st.setAttribute('aria-label', text.join(' '));
@@ -19,17 +18,17 @@
     words = Array.prototype.slice.call(st.querySelectorAll('.w'));
   }
 
-  // referenties verschijnen bij het scrollen
-  var rv = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && rv.length) {
+  // lijnen en foto's verschijnen één keer als ze in beeld komen
+  var targets = document.querySelectorAll('.row, .about-photo, .reveal');
+  if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
     }, { threshold: 0.15 });
-    rv.forEach(function (el) { io.observe(el); });
+    targets.forEach(function (el) { io.observe(el); });
   } else {
-    rv.forEach(function (el) { el.classList.add('in'); });
+    targets.forEach(function (el) { el.classList.add('in'); });
   }
 
   var ticking = false;
@@ -38,27 +37,15 @@
     var y = window.scrollY, vh = window.innerHeight;
     var max = document.documentElement.scrollHeight - vh;
     if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    if (nav) nav.classList.toggle('solid', y > 40);
 
-    if (!reduce) {
-      if (photo && y < vh * 1.2) {
-        photo.style.transform = 'translateY(' + (y * -0.12) + 'px) rotate(' + (y * 0.006) + 'deg)';
+    if (!reduce && y < vh * 1.3) {
+      // de twee naamregels schuiven bij het scrollen in tegengestelde richting weg
+      if (lines.length === 2) {
+        lines[0].style.transform = 'translateX(' + (-y * 0.12) + 'px)';
+        lines[1].style.transform = 'translateX(' + (y * 0.12) + 'px)';
       }
-      if (sticker && y < vh * 1.2) {
-        sticker.style.transform = 'rotate(' + (-12 + y * 0.35) + 'deg)';
-      }
-      // projectpagina: hero-afbeelding zoomt en schuift zacht mee
-      if (pimg && y < vh * 1.2) {
-        pimg.style.transform = 'translateY(' + (y * 0.06) + 'px) scale(' + (1 + y * 0.00025) + ')';
-      }
-      // projectkaarten: de vorige kaart krimpt als de volgende erover schuift
-      cards.forEach(function (c, i) {
-        var next = cards[i + 1];
-        if (!next) return;
-        var top = next.getBoundingClientRect().top;
-        var p = Math.min(1, Math.max(0, 1 - (top - 90) / (vh * 0.7)));
-        c.style.transform = 'scale(' + (1 - p * 0.06) + ')';
-        c.style.filter = 'brightness(' + (1 - p * 0.18) + ')';
-      });
+      if (pimg) pimg.style.transform = 'translateY(' + (y * 0.05) + 'px)';
     }
 
     if (words.length && st) {

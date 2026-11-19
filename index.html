@@ -3,147 +3,114 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — Pleuni Brans</title>
+<title>Pleuni Brans — Brans Design</title>
 <meta name="description" content="Pleuni Brans, Communication & Multimedia Design. UX/UI, concept en creatieve uitvoering. Open voor werk en nieuwe uitdagingen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261119">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261119c">
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
 
 <nav class="nav" aria-label="Hoofdmenu">
-  <a class="logo" href="index.html">pleuni<span>.</span></a>
-  <a class="link" href="index.html#work">Mijn werk</a>
-  <a class="link" href="index.html#about">Over mij</a>
-  <a class="link" href="index.html#contact">Contact</a>
-  <a class="link" href="referenties.html">Referenties</a>
+  <a class="logo" href="index.html">Brans Design</a>
+  <div class="links">
+    <a class="link" href="index.html#work">Mijn werk</a>
+    <a class="link" href="index.html#about">Over mij</a>
+    <a class="link" href="index.html#contact">Contact</a>
+    <a class="link" href="referenties.html">Referenties</a>
+  </div>
 </nav>
 
 <header class="hero">
-  <div>
-    <h1 aria-label="Pleuni Brans">
-      <span class="line"><span>Pleuni</span></span>
-      <span class="line"><span>Brans</span></span>
-    </h1>
-    <p class="role">Communication &amp; Multimedia Design. Concept, ontwerp en realisatie.</p>
-    <a class="btn" href="#work">Bekijk mijn werk</a>
+  <div class="hero-top">
+    <p>Communication &amp; Multimedia Design. Concept, ontwerp en realisatie.</p>
+    <span class="status">Open voor werk</span>
   </div>
-  <div class="photo-wrap">
-    <div class="photo"><img src="assets/about/aboutme-foto1.JPG" alt="Portret van Pleuni Brans"></div>
-    <div class="sticker" aria-hidden="true">open voor<br>werk!</div>
-  </div>
-  <span class="hint" aria-hidden="true">scroll ↓</span>
+  <h1 aria-label="Pleuni Brans">
+    <span class="line"><span>Pleuni</span></span>
+    <span class="line"><span>Brans</span></span>
+  </h1>
 </header>
 
-<div class="marquee" aria-hidden="true">
-  <div class="track">
-    <span>UX / UI</span><i>✦</i><span>Concept</span><i>✦</i><span>Brand identity</span><i>✦</i><span>Figma-prototyping</span><i>✦</i><span>Events</span><i>✦</i><span>Front-end</span><i>✦</i>
-    <span>UX / UI</span><i>✦</i><span>Concept</span><i>✦</i><span>Brand identity</span><i>✦</i><span>Figma-prototyping</span><i>✦</i><span>Events</span><i>✦</i><span>Front-end</span><i>✦</i>
-  </div>
-</div>
-
 <main>
+<section class="statement-sec">
+  <p class="statement">Ik leer het snelst door te doen, en hou van projecten waar ontwerp en uitvoering samenkomen.</p>
+</section>
+
 <section id="work" class="work">
-  <h2 class="section-title">Projecten</h2>
-  <div class="stack">
-    <a class="card c1" href="paradiso.html">
-      <div class="txt">
-        <span class="tag">Front-end / UX</span>
-        <h3>Paradiso Website</h3>
-        <div class="bottom">
-          <p>Twee pagina's van de Paradiso-website nagebouwd met Vanilla HTML, CSS en JavaScript, met focus op semantische code, toegankelijkheid en responsiviteit.</p>
-          <span class="go" aria-hidden="true"><b>→</b></span>
-        </div>
-      </div>
-      <div class="shot fit light"><img src="assets/paradiso/1.jpg" alt="Paradiso website op desktop, laptop en telefoon" loading="lazy"></div>
+  <h2 class="sec-title">Projecten</h2>
+  <div class="list">
+    <a class="row" href="paradiso.html">
+      <img class="thumb" src="assets/paradiso/1.jpg" alt="" loading="lazy">
+      <h3>Paradiso Website</h3>
+      <p>Twee pagina's van de Paradiso-website nagebouwd met Vanilla HTML, CSS en JavaScript, met focus op semantische code, toegankelijkheid en responsiviteit.</p>
+      <span class="disc">Front-end / UX</span>
     </a>
-    <a class="card c2" href="shotjesbar.html">
-      <div class="txt">
-        <span class="tag">Concept &amp; Design</span>
-        <h3>Dé Shotjesbar</h3>
-        <div class="bottom">
-          <p>Conceptuitwerking voor een mobiele shotjesbar voor evenementen.</p>
-          <span class="go" aria-hidden="true"><b>→</b></span>
-        </div>
-      </div>
-      <div class="shot"><img src="assets/shotjesbar/mock.png" alt="Visitekaartje van Dé Shotjesbar" loading="lazy"></div>
+    <a class="row" href="shotjesbar.html">
+      <img class="thumb" src="assets/shotjesbar/stage.jpg" alt="" loading="lazy">
+      <h3>Dé Shotjesbar</h3>
+      <p>Conceptuitwerking voor een mobiele shotjesbar voor evenementen.</p>
+      <span class="disc">Concept &amp; Design</span>
     </a>
-    <a class="card c3" href="events.html">
-      <div class="txt">
-        <span class="tag">Events &amp; Planning</span>
-        <h3>Events &amp; Planning</h3>
-        <div class="bottom">
-          <p>Creatief en productiewerk voor evenementenbureau Events &amp; Planning. Van ontwerpconcept tot uitvoering op locatie.</p>
-          <span class="go" aria-hidden="true"><b>→</b></span>
-        </div>
-      </div>
-      <div class="shot"><img src="assets/events/Asset2.jpg" alt="Gevel van Events &amp; Planning met nieuwe bestickering" loading="lazy"></div>
+    <a class="row" href="events.html">
+      <img class="thumb" src="assets/events/Asset2.jpg" alt="" loading="lazy">
+      <h3>Events &amp; Planning</h3>
+      <p>Creatief en productiewerk voor evenementenbureau Events &amp; Planning. Van ontwerpconcept tot uitvoering op locatie.</p>
+      <span class="disc">Events</span>
     </a>
-    <a class="card c4" href="knmi.html">
-      <div class="txt">
-        <span class="tag">UX / UI</span>
-        <h3>KNMI</h3>
-        <div class="bottom">
-          <p>UI/UX design voor het KNMI: dashboardinterfaces, data- en API-weergaven, interactieve kaartcomponenten en beheerderstools.</p>
-          <span class="go" aria-hidden="true"><b>→</b></span>
-        </div>
-      </div>
-      <div class="shot fit"><img src="assets/knmi/mockups.jpg" alt="Mobiele schermen van het KNMI-ontwerp" loading="lazy"></div>
+    <a class="row" href="knmi.html">
+      <img class="thumb" src="assets/knmi/mockups.jpg" alt="" loading="lazy">
+      <h3>KNMI</h3>
+      <p>UI/UX design voor het KNMI: dashboardinterfaces, data- en API-weergaven, interactieve kaartcomponenten en beheerderstools.</p>
+      <span class="disc">UX / UI</span>
     </a>
-    <a class="card c5" href="haarlem.html">
-      <div class="txt">
-        <span class="tag">UX / UI</span>
-        <h3>Haarlem Marketing</h3>
-        <div class="bottom">
-          <p>UX/UI design bij Haarlem Marketing. Webpagina's herontworpen voor Visit Haarlem, van onderzoek tot werkend Figma-prototype.</p>
-          <span class="go" aria-hidden="true"><b>→</b></span>
-        </div>
-      </div>
-      <div class="shot fit"><img src="assets/haarlem/nacht-uitagenda.jpg" alt="Nachtuitagenda van Visit Haarlem op laptop en telefoon" loading="lazy"></div>
+    <a class="row" href="haarlem.html">
+      <img class="thumb" src="assets/haarlem/nacht-uitagenda.jpg" alt="" loading="lazy">
+      <h3>Haarlem Marketing</h3>
+      <p>UX/UI design bij Haarlem Marketing. Webpagina's herontworpen voor Visit Haarlem, van onderzoek tot werkend Figma-prototype.</p>
+      <span class="disc">UX / UI</span>
     </a>
-    <a class="card c6" href="ondernemen.html">
-      <div class="txt">
-        <span class="tag">UX / UI</span>
-        <h3>Ondernemen in Haarlem</h3>
-        <div class="bottom">
-          <p>UX/UI design voor een platform voor ondernemers in Haarlem, in opdracht van Haarlem Marketing.</p>
-          <span class="go" aria-hidden="true"><b>→</b></span>
-        </div>
-      </div>
-      <div class="shot fit"><img src="assets/ondernemen/banner.jpg" alt="Platform Ondernemen in Haarlem op laptops" loading="lazy"></div>
+    <a class="row" href="ondernemen.html">
+      <img class="thumb" src="assets/ondernemen/banner.jpg" alt="" loading="lazy">
+      <h3>Ondernemen in Haarlem</h3>
+      <p>UX/UI design voor een platform voor ondernemers in Haarlem, in opdracht van Haarlem Marketing.</p>
+      <span class="disc">UX / UI</span>
     </a>
   </div>
 </section>
 
 <section id="about" class="about">
-  <h2 class="section-title">Over mij</h2>
-  <div class="grid">
-    <div>
-      <p class="statement">Ik leer het snelst door te doen, en hou van projecten waar ontwerp en uitvoering samenkomen.</p>
+  <h2 class="sec-title">Over mij</h2>
+  <div class="about-grid">
+    <div class="about-photo"><div class="img"><img src="assets/about/aboutme-foto2%201.jpg" alt="Pleuni Brans" loading="lazy"></div></div>
+    <div class="about-text">
       <p>Ik ben Pleuni, vierdejaars student van de opleiding CMD op de Hogeschool van Amsterdam. Ik heb een brede interesse in UX, conceptontwikkeling en creatieve uitvoering. Van gebruikersonderzoek en prototyping in Figma tot creatieve concepten. Ik pak dingen breed op en leer het snelst door te doen.</p>
       <p>Ik hou van nieuwe dingen en onbekende omgevingen. Zo heb ik veel gereisd en een minor in filosofie afgerond in Istanbul. Vijf maanden in een onbekende stad, in een vakgebied buiten mijn comfortzone. Dit soort ervaringen, zoals werken in een internationale omgeving, geven mij frisse energie en inspiratie. Snel schakelen en open staan voor andere perspectieven.</p>
       <p>Ik zoek een plek waar ik kan bijdragen en blijven leren. Ik werk goed zelfstandig, maar waardeer begeleiding en feedback om verder te groeien.</p>
-      <div class="chips"><span>Brand Identity</span><span>UI / UX</span><span>Figma-prototyping</span></div>
+      <ul class="skills">
+        <li>Brand identity</li>
+        <li>UI / UX</li>
+        <li>Figma-prototyping</li>
+      </ul>
     </div>
-    <div class="pic"><img src="assets/about/aboutme-foto2%201.jpg" alt="Pleuni Brans bij een molen in Haarlem" loading="lazy"></div>
   </div>
 </section>
 
 <section id="contact" class="contact">
-  <h2 class="big">Laten we samenwerken.</h2>
+  <h2>Laten we samenwerken.</h2>
   <p class="sub">Open voor werk en nieuwe uitdagingen. Stuur me gerust een bericht.</p>
   <a class="mail" href="mailto:pleuni.brans@gmail.com">Pleuni.brans@gmail.com</a>
-  <div class="socials">
-    <a class="btn dark" href="https://www.linkedin.com/in/pleuni-brans-8067a91b9/" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn dark" href="https://github.com/PleuniBrans" target="_blank" rel="noopener">Github</a>
-    <a class="btn dark" href="Pleuni-Brans-Portfolio.pdf" download>Download portfolio (PDF)</a>
+  <div class="more">
+    <a class="tl" href="https://www.linkedin.com/in/pleuni-brans-8067a91b9/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="tl" href="https://github.com/PleuniBrans" target="_blank" rel="noopener">Github</a>
+    <a class="tl" href="Pleuni-Brans-Portfolio.pdf" download>Portfolio als pdf</a>
   </div>
 </section>
 </main>
 
-<footer><span>© 2026 Pleuni</span><a href="#" onclick="window.scrollTo({top:0});return false;">Terug naar boven</a></footer>
-<script src="script.js?v=20261119"></script>
+<footer><span>© 2026 Brans Design</span><a class="tl" href="#" onclick="window.scrollTo({top:0});return false;">Naar boven</a></footer>
+<script src="script.js?v=20261119c"></script>
 </body>
 </html>

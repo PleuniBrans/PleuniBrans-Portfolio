@@ -1,52 +1,42 @@
-/* Projectpagina's — bouwt voort op style.css */
+/* Projectpagina's: bouwt voort op style.css */
 
-body.proj{background:var(--paper);color:var(--ink);--muted:#4b4a6b}
-body.proj .nav{border:1px solid rgba(255,255,255,.18)}
-
-/* thema per project: kleur van de hero = kleur van de kaart op de homepage */
-.t-pink{--hc:var(--pink);--hf:var(--ink)}
-.t-ink{--hc:var(--ink);--hf:var(--paper)}
-.t-blue{--hc:var(--blue);--hf:var(--white)}
-.t-white{--hc:var(--white);--hf:var(--ink)}
-.t-lav{--hc:var(--lav);--hf:var(--ink)}
-.t-inkpink{--hc:var(--ink);--hf:var(--pink)}
+body.proj{background:var(--stone);color:var(--night)}
 
 /* hero */
-.p-hero{background:var(--hc);color:var(--hf);padding:130px var(--pad) clamp(40px,6vw,80px);display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,64px);align-items:end;min-height:88svh}
-.t-white .p-hero{border-bottom:2px solid var(--ink)}
-.p-hero .back{display:inline-block;font-weight:700;text-decoration:none;border:2px solid currentColor;border-radius:999px;padding:4px 16px;font-size:.9rem;margin-bottom:clamp(24px,5vw,56px);transition:transform .25s}
-.p-hero .back:hover{transform:translateX(-4px)}
-.p-hero .tag{display:inline-block;border:2px solid currentColor;border-radius:999px;padding:4px 16px;font-size:.9rem;font-weight:600;margin:0 0 20px}
-.p-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.7rem,7.4vw,7.2rem);line-height:.92;letter-spacing:-.045em;overflow-wrap:break-word;opacity:0;transform:translateY(40px);animation:pin .9s .1s cubic-bezier(.2,.8,.2,1) forwards}
-.p-hero .lead{font-size:clamp(1.05rem,1.6vw,1.3rem);line-height:1.55;max-width:46ch;margin-top:28px;opacity:0;animation:fade .8s .5s forwards}
+.p-hero{background:var(--deep);color:var(--stone);padding:130px var(--pad) clamp(50px,7vw,100px);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,80px);align-items:end;min-height:86svh}
+.p-hero .back{display:inline-block;margin-bottom:clamp(28px,6vw,70px)}
+.p-hero .disc{display:block;font-style:italic;color:var(--rose);margin-bottom:14px}
+.p-hero h1{font-family:var(--head);font-weight:400;font-size:clamp(2.8rem,8vw,8.2rem);line-height:.95;letter-spacing:-.045em;overflow-wrap:break-word;opacity:0;transform:translateY(40px);animation:pin .9s .1s var(--ease) forwards}
 @keyframes pin{to{opacity:1;transform:none}}
-.p-hero-img{border-radius:28px;overflow:hidden;background:#000;aspect-ratio:4/3;opacity:0;animation:fade 1s .3s forwards;align-self:center}
+.p-hero .lead{font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.6;max-width:44ch;margin-top:28px;opacity:0;animation:fadein .8s .5s forwards}
+@keyframes fadein{to{opacity:1}}
+.p-hero-img{overflow:hidden;background:#000;aspect-ratio:4/3;align-self:center;clip-path:inset(100% 0 0 0);animation:wipe 1.1s .3s var(--ease) forwards}
+@keyframes wipe{to{clip-path:inset(0)}}
 .p-hero-img img{width:100%;height:100%;object-fit:cover;will-change:transform}
 .p-hero-img.fit img{object-fit:contain}
 .p-hero-img.light{background:#fff}
 @media(max-width:860px){.p-hero{grid-template-columns:1fr;align-items:start;min-height:0;padding-top:110px}.p-hero-img{aspect-ratio:16/10}}
 
-/* meta */
-.p-meta{padding:clamp(40px,6vw,72px) var(--pad) 0;display:flex;flex-wrap:wrap;gap:14px}
-.p-meta div{background:var(--white);border:2px solid var(--ink);border-radius:22px;padding:14px 22px;min-width:180px}
-.p-meta dt{font-size:.85rem;color:var(--muted);font-weight:500}
-.p-meta dd{font-family:var(--display);font-weight:700;font-size:1.15rem;line-height:1.25;margin-top:2px}
+/* gegevens */
+.p-meta{padding:clamp(50px,7vw,90px) var(--pad) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px clamp(20px,3vw,48px);max-width:1100px}
+.p-meta div{border-top:1px solid rgba(7,21,15,.35);padding-top:14px}
+.p-meta dt{font-style:italic;font-size:.95rem;opacity:.75}
+.p-meta dd{font-family:var(--head);font-size:1.2rem;line-height:1.25;letter-spacing:-.02em;margin-top:4px}
 
 /* tekst */
-.p-text{padding:clamp(40px,6vw,80px) var(--pad);max-width:calc(68ch + var(--pad)*2)}
-.p-text p{font-size:1.12rem;line-height:1.75;margin-bottom:1.3em;max-width:68ch}
-.p-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-.p-links .btn{background:var(--ink);color:var(--white)}
-.p-links .btn:hover{background:var(--blue)}
+.p-text{padding:clamp(40px,6vw,80px) var(--pad)}
+.p-text p{font-size:1.16rem;line-height:1.8;margin-bottom:1.3em;max-width:62ch}
+.p-links{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:10px}
+.p-links a{font-family:var(--head);color:var(--deep);letter-spacing:-.02em;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px;transition:color .3s}
+.p-links a:hover{color:var(--night);text-decoration-color:var(--rose)}
 
-/* galerij */
-.p-gallery{padding:0 var(--pad) clamp(60px,9vw,120px);display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,2vw,24px)}
+/* beeld */
+.p-gallery{padding:0 var(--pad) clamp(70px,10vw,140px);display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2vw,26px)}
 .fig{margin:0;position:relative}
 .fig.full{grid-column:1/-1}
-.fig .frame{border-radius:24px;overflow:hidden;background:#000;position:relative}
-.fig.light .frame{background:#fff;border:2px solid var(--ink)}
-.fig img{display:block;width:100%;height:auto;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-.fig:hover img{transform:scale(1.025)}
+.fig .frame{overflow:hidden;background:#000;position:relative}
+.fig.light .frame{background:#fff}
+.fig img{display:block;width:100%;height:auto}
 .fig.cover .frame{aspect-ratio:4/3}
 .fig.cover img{height:100%;object-fit:cover}
 .fig.portrait .frame{aspect-ratio:4/5}
@@ -54,8 +44,8 @@ body.proj .nav{border:1px solid rgba(255,255,255,.18)}
 .fig.wide .frame{aspect-ratio:16/9}
 .fig.wide img{height:100%;object-fit:contain}
 .fig.contain img{height:100%;object-fit:contain}
-.fig figcaption{font-size:.92rem;color:var(--muted);margin:10px 6px 0}
-/* rij met een hoge foto links en twee gestapelde rechts */
+.fig figcaption{font-style:italic;font-size:.98rem;margin:10px 0 0;opacity:.8}
+/* een hoge foto links, twee gestapeld rechts */
 .fig.tall{grid-row:span 2;display:flex;flex-direction:column}
 .fig.tall .frame{flex:1;aspect-ratio:auto;min-height:420px}
 .fig.tall img{position:absolute;inset:0;height:100%;object-fit:cover}
@@ -65,15 +55,13 @@ body.proj .nav{border:1px solid rgba(255,255,255,.18)}
 @media(max-width:700px){.p-gallery{grid-template-columns:1fr}.fig.tall{grid-row:auto}.fig.tall .frame{min-height:0;aspect-ratio:4/5}.fig.fill .frame{min-height:0;aspect-ratio:16/10}}
 
 /* volgend project */
-.next{display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px;margin:0 var(--pad) clamp(40px,6vw,80px);padding:clamp(28px,4vw,56px);border-radius:32px;background:var(--hc);color:var(--hf);text-decoration:none;min-height:240px;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-.next:hover{transform:translateY(-6px) rotate(-.5deg)}
-.next.t-white{border:2px solid var(--ink)}
-.next small{display:block;font-size:1rem;font-weight:500;margin-bottom:10px}
-.next strong{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,6vw,5.4rem);line-height:.95;letter-spacing:-.04em}
-.next .go{width:64px;height:64px;border-radius:50%;background:currentColor;display:grid;place-items:center;font-size:1.7rem;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-.next .go b{color:var(--hc);font-weight:400;line-height:1}
-.next:hover .go{transform:rotate(-45deg) scale(1.1)}
+.next{display:block;background:var(--night);color:var(--stone);padding:clamp(60px,9vw,130px) var(--pad);text-decoration:none}
+.next small{display:block;font-style:italic;font-size:1.05rem;margin-bottom:12px;color:var(--rose)}
+.next strong{display:block;font-family:var(--head);font-weight:400;font-size:clamp(2.4rem,8.4vw,8.6rem);line-height:.95;letter-spacing:-.045em;transition:transform .5s var(--ease),color .3s}
+.next:hover strong,.next:focus-visible strong{transform:translateX(20px);color:var(--rose)}
+body.proj footer{border-top:1px solid rgba(229,232,226,.2)}
 
 @media(prefers-reduced-motion:reduce){
-  .p-hero h1,.p-hero .lead,.p-hero-img{opacity:1;transform:none}
+  .p-hero h1,.p-hero .lead{opacity:1;transform:none}
+  .p-hero-img{clip-path:inset(0)}
 }
