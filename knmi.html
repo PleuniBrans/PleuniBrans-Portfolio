@@ -1,46 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KNMI — Pleuni</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="project.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KNMI — Pleuni Brans</title>
+<meta name="description" content="UI/UX design voor een luchtkwaliteitsplatform voor Kumasi, Ghana, in opdracht van het KNMI. Het omzetten van onzichtbare meetdata naar een toegankelijke kaart voor bewoners én een bruikbaar platform voor wetenschappers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project.css">
 </head>
-<body>
+<body class="proj">
+<div class="progress" aria-hidden="true"></div>
 
-  <a href="index.html#work" class="back-link">← Back</a>
+<nav class="nav" aria-label="Hoofdmenu">
+  <a class="logo" href="index.html">pleuni<span>.</span></a>
+  <a class="link" href="index.html#work">Mijn werk</a>
+  <a class="link" href="index.html#about">Over mij</a>
+  <a class="link" href="index.html#contact">Contact</a>
+  <a class="link" href="referenties.html">Referenties</a>
+</nav>
 
-  <div class="project-hero" style="background-image: url('assets/knmi/mockups.jpg');"></div>
-
-  <div class="project-body">
-    <span class="label">UI / UX</span>
-    <h1 style="font-family:Georgia,serif;font-size:clamp(2rem,5vw,4rem);font-weight:normal;letter-spacing:-0.02em;margin-bottom:2rem;">KNMI</h1>
-
-    <p class="project-intro">UI/UX design voor een luchtkwaliteitsplatform voor Kumasi, Ghana, in opdracht van het KNMI. Het omzetten van onzichtbare meetdata naar een toegankelijke kaart voor bewoners én een bruikbaar platform voor wetenschappers.</p>
-
-    <div class="project-meta">
-      <div class="meta-item"><span class="meta-label">Opdrachtgever</span><span class="meta-value">KNMI</span></div>
-      <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">UI / UX Design</span></div>
-      <div class="meta-item"><span class="meta-label">Tools</span><span class="meta-value">Figma</span></div>
-    </div>
-
-    <div class="project-text">
-      <p>In Kumasi meet het KNMI al maanden NO₂-waarden op 20 locaties met Palmes-buisjes, maar deze data was nergens publiek in te zien. We begonnen met deskresearch naar hoe WHO, EU en CleanAir Fund luchtkwaliteit communiceren, en ontdekten dat Ghana geen eigen bindende NO₂-norm hanteert, een keuze die grote invloed had op hoe we de data zouden interpreteren. Een eerste ontwerp volgens strikte WHO-richtlijnen kleurde de hele kaart donkerrood, wat averechts werkte in plaats van bewustwording te creëren. Daarom ontwierp ik een schakelfunctie waarmee gebruikers zelf kunnen wisselen tussen WHO-richtlijnen, EU-normen en een relatieve weergave binnen Kumasi.
-       <p>Het resultaat: een interactieve kaart met kleurcodering als eerste laag, en gedetailleerde context, historie en meetmethode bij een klik op elk meetpunt — zodat zowel bewoners als onderzoekers op hun eigen niveau met dezelfde data kunnen werken..</p>
-      <p>De focus lag op heldere informatiestructuur en gebruiksvriendelijkheid voor zowel eindgebruikers als professionals.</p>
-<p>Link naar volledige case study: <a href="https://www.figma.com/design/FKTWLbHTvOYdbCHLa7Pmhn/Proces---Double-B---Jamie-Buffing---Pleuni-Brans?node-id=221-521&t=I1ngCMxZyJbRGzdm-1" target="_blank" rel="noopener noreferrer">Figma</a></p>    </div>
-
-    <div class="gallery cols-2">
-      <img src="assets/knmi/p1.jpg" alt="Homepage met kaart" class="wide span-2" />
-      <img src="assets/knmi/p2.jpg" alt="Admin dashboard" class="wide span-2"/>
-    </div>
+<header class="p-hero t-white">
+  <div>
+    <a class="back" href="index.html#work">← Alle projecten</a><br>
+    <span class="tag">UX / UI</span>
+    <h1>KNMI</h1>
+    <p class="lead">UI/UX design voor een luchtkwaliteitsplatform voor Kumasi, Ghana, in opdracht van het KNMI. Het omzetten van onzichtbare meetdata naar een toegankelijke kaart voor bewoners én een bruikbaar platform voor wetenschappers.</p>
   </div>
+  <div class="p-hero-img fit"><img src="assets/knmi/mockups.jpg" alt="Mobiele schermen van het KNMI-ontwerp"></div>
+</header>
 
-  <footer>
-    <span>© 2026 Pleuni</span>
-    <a href="index.html#work" style="color:var(--muted);text-decoration:none;font-size:0.8rem;">← Back to work</a>
-  </footer>
+<main>
+  <dl class="p-meta"><div><dt>Opdrachtgever</dt><dd>KNMI</dd></div><div><dt>Type</dt><dd>UI / UX design</dd></div><div><dt>Tools</dt><dd>Figma</dd></div></dl>
 
+  <section class="p-text">
+      <p>In Kumasi meet het KNMI al maanden NO₂-waarden op 20 locaties met Palmes-buisjes, maar deze data was nergens publiek in te zien. We begonnen met deskresearch naar hoe WHO, EU en CleanAir Fund luchtkwaliteit communiceren, en ontdekten dat Ghana geen eigen bindende NO₂-norm hanteert, een keuze die grote invloed had op hoe we de data zouden interpreteren. Een eerste ontwerp volgens strikte WHO-richtlijnen kleurde de hele kaart donkerrood, wat averechts werkte in plaats van bewustwording te creëren. Daarom ontwierp ik een schakelfunctie waarmee gebruikers zelf kunnen wisselen tussen WHO-richtlijnen, EU-normen en een relatieve weergave binnen Kumasi.</p>
+      <p>Het resultaat: een interactieve kaart met kleurcodering als eerste laag, en gedetailleerde context, historie en meetmethode bij een klik op elk meetpunt, zodat zowel bewoners als onderzoekers op hun eigen niveau met dezelfde data kunnen werken.</p>
+      <p>De focus lag op heldere informatiestructuur en gebruiksvriendelijkheid voor zowel eindgebruikers als professionals.</p>
+      <div class="p-links"><a class="btn" href="https://www.figma.com/design/FKTWLbHTvOYdbCHLa7Pmhn/Proces---Double-B---Jamie-Buffing---Pleuni-Brans?node-id=221-521&amp;t=I1ngCMxZyJbRGzdm-1" target="_blank" rel="noopener noreferrer">Bekijk de volledige case study in Figma</a></div>
+  </section>
+
+  <section class="p-gallery" aria-label="Beeld van het project">
+    <figure class="fig reveal full wide"><div class="frame"><img src="assets/knmi/p1.jpg" alt="Ontwerp voor bewoners van Kumasi" loading="lazy"></div><figcaption>Het ontwerp voor bewoners van Kumasi</figcaption></figure>
+    <figure class="fig reveal full wide"><div class="frame"><img src="assets/knmi/p2.jpg" alt="Ontwerp voor wetenschappers en labmedewerkers" loading="lazy"></div><figcaption>Het ontwerp voor wetenschappers en labmedewerkers</figcaption></figure>
+  </section>
+
+  <a class="next t-lav" href="haarlem.html">
+    <span><small>Volgend project</small><strong>Haarlem Marketing</strong></span>
+    <span class="go" aria-hidden="true"><b>→</b></span>
+  </a>
+</main>
+
+<footer><span>© 2026 Pleuni</span><a href="index.html#work">Terug naar alle projecten</a></footer>
+<script src="script.js"></script>
 </body>
 </html>
