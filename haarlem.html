@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haarlem Marketing — Pleuni</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="project.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haarlem Marketing — Pleuni Brans</title>
+<meta name="description" content="Herontwerp van meerdere webpagina&#x27;s voor Visit Haarlem, inclusief een nieuwe pagina met eigen visuele stijl.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project.css">
 </head>
-<body>
+<body class="proj">
+<div class="progress" aria-hidden="true"></div>
 
-  <a href="index.html#work" class="back-link">← Back</a>
+<nav class="nav" aria-label="Hoofdmenu">
+  <a class="logo" href="index.html">pleuni<span>.</span></a>
+  <a class="link" href="index.html#work">Mijn werk</a>
+  <a class="link" href="index.html#about">Over mij</a>
+  <a class="link" href="index.html#contact">Contact</a>
+  <a class="link" href="referenties.html">Referenties</a>
+</nav>
 
-  <div class="project-hero" style="background: #111; min-height: 40vh;"></div>
-
-  <div class="project-body">
-    <span class="label">UX/UI</span>
-    <h1 style="font-family:Georgia,serif;font-size:clamp(2rem,5vw,4rem);font-weight:normal;letter-spacing:-0.02em;margin-bottom:2rem;">Haarlem Marketing</h1>
-
-    <p class="project-intro">Herontwerp van meerdere webpagina's voor Visit Haarlem, inclusief een nieuwe pagina met eigen visuele stijl.</p>
-    <div class="project-meta">
-      <div class="meta-item"><span class="meta-label">Opdrachtgever</span><span class="meta-value">Haarlem Marketing</span></div>
-      <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Marketing Design</span></div>
-    </div>
-
-  <!-- foto's vervangen -->
-     <div class="project-text">
-      <p>Tijdens mijn stage bij Haarlem Marketing heb ik meegewerkt aan het herontwerpen van meerdere webpagina's voor de website Visit Haarlem. Op basis van eigen onderzoek zocht ik naar de huidige knelpunten binnen de website en maakte ik analyses van vergelijkbare platforms. Aan de hand hiervan stelde ik herontwerpen voor in Figma, voor zowel desktop als mobiel. Daarnaast ontwierp ik de nachtuitagenda met een nieuwe visuele stijl.Het ontwerp staat live op visithaarlem.com.</p>
-    </div>
-    <div class="gallery cols-2">
-      <img src="assets/haarlem/nacht-uitagenda.jpg" alt="Haarlem website screenshot" class="wide span-2" />
-      <img src="assets/haarlem/homepage1.jpg" alt="Haarlem website detail" class="wide span-2" />
-      <img src="assets/haarlem/homepage 2.jpg" alt="Haarlem website mobile" class="wide span-2" />
-    </div>
-    </div>
+<header class="p-hero t-lav">
+  <div>
+    <a class="back" href="index.html#work">← Alle projecten</a><br>
+    <span class="tag">UX / UI</span>
+    <h1>Haarlem Marketing</h1>
+    <p class="lead">Herontwerp van meerdere webpagina&#x27;s voor Visit Haarlem, inclusief een nieuwe pagina met eigen visuele stijl.</p>
   </div>
+  <div class="p-hero-img fit"><img src="assets/haarlem/nacht-uitagenda.jpg" alt="Nachtuitagenda van Visit Haarlem op laptop en telefoon"></div>
+</header>
 
-  <footer>
-    <span>© 2026 Pleuni</span>
-    <a href="index.html#work" style="color:var(--muted);text-decoration:none;font-size:0.8rem;">← Back to work</a>
-  </footer>
+<main>
+  <dl class="p-meta"><div><dt>Opdrachtgever</dt><dd>Haarlem Marketing</dd></div><div><dt>Type</dt><dd>Marketing design</dd></div></dl>
 
+  <section class="p-text">
+      <p>Tijdens mijn stage bij Haarlem Marketing heb ik meegewerkt aan het herontwerpen van meerdere webpagina&#x27;s voor de website Visit Haarlem. Op basis van eigen onderzoek zocht ik naar de huidige knelpunten binnen de website en maakte ik analyses van vergelijkbare platforms. Aan de hand hiervan stelde ik herontwerpen voor in Figma, voor zowel desktop als mobiel. Daarnaast ontwierp ik de nachtuitagenda met een nieuwe visuele stijl. Het ontwerp staat live op visithaarlem.com.</p>
+      <div class="p-links"><a class="btn" href="https://visithaarlem.com" target="_blank" rel="noopener noreferrer">Bekijk visithaarlem.com</a></div>
+  </section>
+
+  <section class="p-gallery" aria-label="Beeld van het project">
+    <figure class="fig reveal full wide"><div class="frame"><img src="assets/haarlem/nacht-uitagenda.jpg" alt="Nachtuitagenda van Visit Haarlem" loading="lazy"></div><figcaption>De nachtuitagenda met een eigen visuele stijl</figcaption></figure>
+    <figure class="fig reveal full wide"><div class="frame"><img src="assets/haarlem/homepage1.jpg" alt="Herontwerp van de homepage van Visit Haarlem" loading="lazy"></div><figcaption>Herontwerp van de homepage</figcaption></figure>
+    <figure class="fig reveal full wide"><div class="frame"><img src="assets/haarlem/homepage%202.jpg" alt="Herontwerp van een pagina van Visit Haarlem" loading="lazy"></div><figcaption>Herontwerp van een pagina op Visit Haarlem</figcaption></figure>
+  </section>
+
+  <a class="next t-inkpink" href="ondernemen.html">
+    <span><small>Volgend project</small><strong>Ondernemen in Haarlem</strong></span>
+    <span class="go" aria-hidden="true"><b>→</b></span>
+  </a>
+</main>
+
+<footer><span>© 2026 Pleuni</span><a href="index.html#work">Terug naar alle projecten</a></footer>
+<script src="script.js"></script>
 </body>
 </html>

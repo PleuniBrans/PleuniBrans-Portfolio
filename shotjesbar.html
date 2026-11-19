@@ -1,49 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dé Shotjesbar — Pleuni</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="project.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dé Shotjesbar — Pleuni Brans</title>
+<meta name="description" content="Ontwerp en uitvoering van een opvallende shotjesbar voor evenementenbureau Events &amp; Planning, succesvol ingezet op meerdere evenementen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project.css">
 </head>
-<body>
+<body class="proj">
+<div class="progress" aria-hidden="true"></div>
 
-  <a href="index.html#work" class="back-link">← Back</a>
+<nav class="nav" aria-label="Hoofdmenu">
+  <a class="logo" href="index.html">pleuni<span>.</span></a>
+  <a class="link" href="index.html#work">Mijn werk</a>
+  <a class="link" href="index.html#about">Over mij</a>
+  <a class="link" href="index.html#contact">Contact</a>
+  <a class="link" href="referenties.html">Referenties</a>
+</nav>
 
-  <div class="project-hero" style="background-image: url('assets/shotjesbar/mock.png');"></div>
-
-  <div class="project-body">
-    <span class="label">Concept &amp; Design</span>
-    <h1 style="font-family:Georgia,serif;font-size:clamp(2rem,5vw,4rem);font-weight:normal;letter-spacing:-0.02em;margin-bottom:2rem;">Dé Shotjesbar</h1>
-
-    <p class="project-intro">Ontwerp en uitvoering van een opvallende shotjesbar voor evenementenbureau Events &amp; Planning, succesvol ingezet op meerdere evenementen.</p>
-
-    <div class="project-meta">
-      <div class="meta-item"><span class="meta-label">Opdrachtgever</span><span class="meta-value">Events &amp; Planning</span></div>
-      <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Concept, Design, Bouw</span></div>
-      <div class="meta-item"><span class="meta-label">Stijl</span><span class="meta-value">Fout &amp; Felle Kleuren</span></div>
-    </div>
-
-    <div class="project-text">
-      <p>In opdracht van evenementenbureau Events &amp; Planning heb ik het concept voor Dé Shotjesbar uitgewerkt en uitgevoerd. Het proces van het bedenken van het spelverloop tot het ontwerpen van de bar en de bouwtekeningen was mijn verantwoordelijkheid.</p>
-      <p>Het idee is simpel: bezoekers draaien aan het rad en kunnen daarmee verschillende shotjes verdienen of meedoen aan een aantal minigames. De belangrijkste eis was dat de bar moest opvallen en een 'foute' uitstraling moest hebben. In het ontwerp heb ik dit vertaald naar felle kleuren in de stijl van Flügel.</p>
-      <p>Dé Shotjesbar is inmiddels op meerdere evenementen succesvol ingezet.</p>
-    </div>
-
-    <div class="gallery cols-2">
-      <img src="assets/shotjesbar/mock.png" alt="Shotjesbar mockup" class="wide span-2" />
-      <img src="assets/shotjesbar/event1.jpg" alt="Shotjesbar in gebruik" class="wide" />
-      <img src="assets/shotjesbar/event2.jpg" alt="Shotjesrad" class="wide" />
-      <img src="assets/shotjesbar/img.jpg" alt="Shotjesbar detail" class="wide" />
-      <img src="assets/shotjesbar/Visite kaartjes DEF.pdf.png" alt="Bouwtekening pagina 1" class="wide" />
-    </div>
+<header class="p-hero t-ink">
+  <div>
+    <a class="back" href="index.html#work">← Alle projecten</a><br>
+    <span class="tag">Concept &amp; Design</span>
+    <h1>Dé Shotjesbar</h1>
+    <p class="lead">Ontwerp en uitvoering van een opvallende shotjesbar voor evenementenbureau Events &amp; Planning, succesvol ingezet op meerdere evenementen.</p>
   </div>
+  <div class="p-hero-img "><img src="assets/shotjesbar/stage.jpg" alt="Dé Shotjesbar in gebruik op een evenement"></div>
+</header>
 
-  <footer>
-    <span>© 2026 Pleuni</span>
-    <a href="index.html#work" style="color:var(--muted);text-decoration:none;font-size:0.8rem;">← Back to work</a>
-  </footer>
+<main>
+  <dl class="p-meta"><div><dt>Opdrachtgever</dt><dd>Events &amp; Planning</dd></div><div><dt>Type</dt><dd>Concept, design, bouw</dd></div><div><dt>Stijl</dt><dd>Fout &amp; felle kleuren</dd></div></dl>
 
+  <section class="p-text">
+      <p>In opdracht van evenementenbureau Events &amp; Planning heb ik het concept voor Dé Shotjesbar uitgewerkt en uitgevoerd. Het proces van het bedenken van het spelverloop tot het ontwerpen van de bar en de bouwtekeningen was mijn verantwoordelijkheid.</p>
+      <p>Het idee is simpel: bezoekers draaien aan het rad en kunnen daarmee verschillende shotjes verdienen of meedoen aan een aantal minigames. De belangrijkste eis was dat de bar moest opvallen en een &#x27;foute&#x27; uitstraling moest hebben. In het ontwerp heb ik dit vertaald naar felle kleuren in de stijl van Flügel.</p>
+      <p>Dé Shotjesbar is inmiddels op meerdere evenementen succesvol ingezet.</p>
+  </section>
+
+  <section class="p-gallery" aria-label="Beeld van het project">
+    <figure class="fig reveal cover"><div class="frame"><img src="assets/shotjesbar/event1.jpg" alt="Shotjesbar in gebruik" loading="lazy"></div><figcaption>De bar in gebruik</figcaption></figure>
+    <figure class="fig reveal cover"><div class="frame"><img src="assets/shotjesbar/event2.jpg" alt="Het shotjesrad" loading="lazy"></div><figcaption>Het shotjesrad</figcaption></figure>
+    <figure class="fig reveal tall"><div class="frame"><img src="assets/shotjesbar/img.jpg" alt="De shotjesbar tijdens de opbouw" loading="lazy"></div><figcaption>De bar tijdens de opbouw</figcaption></figure>
+    <figure class="fig reveal fill"><div class="frame"><img src="assets/shotjesbar/mock.png" alt="Visitekaartje van Dé Shotjesbar" loading="lazy"></div></figure>
+    <figure class="fig reveal fill"><div class="frame"><img src="assets/shotjesbar/img2_Pagina_1.jpg" alt="Logo van Dé Shotjesbar" loading="lazy"></div></figure>
+  </section>
+
+  <a class="next t-blue" href="events.html">
+    <span><small>Volgend project</small><strong>Events &amp; Planning</strong></span>
+    <span class="go" aria-hidden="true"><b>→</b></span>
+  </a>
+</main>
+
+<footer><span>© 2026 Pleuni</span><a href="index.html#work">Terug naar alle projecten</a></footer>
+<script src="script.js"></script>
 </body>
 </html>

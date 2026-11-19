@@ -4,6 +4,7 @@
   var bar = document.querySelector('.progress');
   var photo = document.querySelector('.photo');
   var sticker = document.querySelector('.sticker');
+  var pimg = document.querySelector('.p-hero-img img');
   var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
   var words = [];
 
@@ -44,6 +45,10 @@
       }
       if (sticker && y < vh * 1.2) {
         sticker.style.transform = 'rotate(' + (-12 + y * 0.35) + 'deg)';
+      }
+      // projectpagina: hero-afbeelding zoomt en schuift zacht mee
+      if (pimg && y < vh * 1.2) {
+        pimg.style.transform = 'translateY(' + (y * 0.06) + 'px) scale(' + (1 + y * 0.00025) + ')';
       }
       // projectkaarten: de vorige kaart krimpt als de volgende erover schuift
       cards.forEach(function (c, i) {
