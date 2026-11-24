@@ -1,11 +1,11 @@
 /* Projectpagina's: bouwt voort op style.css */
 
 /* hero */
-.p-hero{background:var(--deep);color:var(--stone);padding:120px var(--pad) clamp(50px,7vw,100px);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,80px);align-items:end;min-height:calc(86svh - var(--gap))}
+.p-hero{background:var(--deep);color:var(--stone);padding:120px var(--pad) clamp(50px,7vw,100px);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,80px);align-items:end;min-height:calc(78svh - var(--gap))}
 .p-hero .back{display:inline-flex;margin-bottom:clamp(28px,6vw,70px);font-weight:600;text-decoration:none;padding:8px 18px;border-radius:999px;border:2px solid rgba(229,232,226,.5);transition:background .25s,color .25s,border-color .25s}
 .p-hero .back:hover{background:var(--rose);border-color:var(--rose);color:var(--night)}
 .p-hero .disc{display:block;font-size:1rem;font-weight:600;color:var(--rose);margin-bottom:14px}
-.p-hero h1{font-family:var(--head);font-weight:400;font-size:clamp(2.8rem,8vw,8.2rem);line-height:.95;letter-spacing:-.045em;overflow-wrap:break-word;opacity:0;transform:translateY(40px);animation:pin .9s .1s var(--ease) forwards}
+.p-hero h1{font-family:var(--head);font-weight:400;font-size:clamp(2.4rem,5.4vw,5.6rem);line-height:.98;letter-spacing:-.045em;overflow-wrap:break-word;opacity:0;transform:translateY(40px);animation:pin .9s .1s var(--ease) forwards}
 @keyframes pin{to{opacity:1;transform:none}}
 .p-hero .lead{font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.6;max-width:44ch;margin-top:28px;opacity:0;animation:fadein .8s .5s forwards}
 .p-hero-img{overflow:hidden;background:#000;aspect-ratio:4/3;align-self:center;border-radius:var(--r-img)}
@@ -54,7 +54,7 @@
 /* volgend project */
 .next{display:block;background:var(--night);color:var(--stone);padding:clamp(60px,9vw,130px) var(--pad);text-decoration:none}
 .next small{display:block;font-size:1rem;font-weight:600;margin-bottom:12px;color:var(--rose)}
-.next strong{display:block;font-family:var(--head);font-weight:400;font-size:clamp(2.4rem,8.4vw,8.6rem);line-height:.95;letter-spacing:-.045em;transition:transform .5s var(--ease),color .3s}
+.next strong{display:block;font-family:var(--head);font-weight:400;font-size:clamp(2rem,5vw,5rem);line-height:.95;letter-spacing:-.045em;transition:transform .5s var(--ease),color .3s}
 .next:hover strong,.next:focus-visible strong{transform:translateX(20px);color:var(--rose)}
 
 @media(prefers-reduced-motion:reduce){
