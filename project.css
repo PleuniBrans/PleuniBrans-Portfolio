@@ -1,40 +1,38 @@
 /* Projectpagina's: bouwt voort op style.css */
 
-body.proj{background:var(--stone);color:var(--night)}
-
 /* hero */
-.p-hero{background:var(--deep);color:var(--stone);padding:130px var(--pad) clamp(50px,7vw,100px);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,80px);align-items:end;min-height:86svh}
-.p-hero .back{display:inline-block;margin-bottom:clamp(28px,6vw,70px)}
-.p-hero .disc{display:block;font-style:italic;color:var(--rose);margin-bottom:14px}
+.p-hero{background:var(--deep);color:var(--stone);padding:120px var(--pad) clamp(50px,7vw,100px);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,80px);align-items:end;min-height:calc(86svh - var(--gap))}
+.p-hero .back{display:inline-flex;margin-bottom:clamp(28px,6vw,70px);font-weight:600;text-decoration:none;padding:8px 18px;border-radius:999px;border:2px solid rgba(229,232,226,.5);transition:background .25s,color .25s,border-color .25s}
+.p-hero .back:hover{background:var(--rose);border-color:var(--rose);color:var(--night)}
+.p-hero .disc{display:inline-block;font-size:.95rem;font-weight:600;background:var(--rose);color:var(--night);padding:5px 14px;border-radius:999px;margin-bottom:18px}
 .p-hero h1{font-family:var(--head);font-weight:400;font-size:clamp(2.8rem,8vw,8.2rem);line-height:.95;letter-spacing:-.045em;overflow-wrap:break-word;opacity:0;transform:translateY(40px);animation:pin .9s .1s var(--ease) forwards}
 @keyframes pin{to{opacity:1;transform:none}}
 .p-hero .lead{font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.6;max-width:44ch;margin-top:28px;opacity:0;animation:fadein .8s .5s forwards}
-@keyframes fadein{to{opacity:1}}
-.p-hero-img{overflow:hidden;background:#000;aspect-ratio:4/3;align-self:center;clip-path:inset(100% 0 0 0);animation:wipe 1.1s .3s var(--ease) forwards}
-@keyframes wipe{to{clip-path:inset(0)}}
+.p-hero-img{overflow:hidden;background:#000;aspect-ratio:4/3;align-self:center;border-radius:var(--r-img);clip-path:inset(100% 0 0 0 round var(--r-img));animation:wipe 1.1s .3s var(--ease) forwards}
+@keyframes wipe{to{clip-path:inset(0 round var(--r-img))}}
 .p-hero-img img{width:100%;height:100%;object-fit:cover;will-change:transform}
 .p-hero-img.fit img{object-fit:contain}
 .p-hero-img.light{background:#fff}
-@media(max-width:860px){.p-hero{grid-template-columns:1fr;align-items:start;min-height:0;padding-top:110px}.p-hero-img{aspect-ratio:16/10}}
+@media(max-width:860px){.p-hero{grid-template-columns:1fr;align-items:start;min-height:0;padding-top:120px}.p-hero-img{aspect-ratio:16/10}}
 
-/* gegevens */
-.p-meta{padding:clamp(50px,7vw,90px) var(--pad) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px clamp(20px,3vw,48px);max-width:1100px}
-.p-meta div{border-top:1px solid rgba(7,21,15,.35);padding-top:14px}
-.p-meta dt{font-style:italic;font-size:.95rem;opacity:.75}
-.p-meta dd{font-family:var(--head);font-size:1.2rem;line-height:1.25;letter-spacing:-.02em;margin-top:4px}
+/* gegevens als zachte kaartjes */
+.p-meta{padding:clamp(40px,6vw,80px) calc(var(--pad) + var(--gap)) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--gap);max-width:1200px}
+.p-meta div{background:var(--paper);border-radius:var(--r-img);padding:18px 22px}
+.p-meta dt{font-size:.92rem;font-weight:500;opacity:.65}
+.p-meta dd{font-family:var(--head);font-size:1.15rem;line-height:1.25;letter-spacing:-.02em;margin-top:4px}
 
 /* tekst */
-.p-text{padding:clamp(40px,6vw,80px) var(--pad)}
-.p-text p{font-size:1.16rem;line-height:1.8;margin-bottom:1.3em;max-width:62ch}
-.p-links{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:10px}
-.p-links a{font-family:var(--head);color:var(--deep);letter-spacing:-.02em;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px;transition:color .3s}
-.p-links a:hover{color:var(--night);text-decoration-color:var(--rose)}
+.p-text{padding:clamp(40px,6vw,80px) calc(var(--pad) + var(--gap))}
+.p-text p{font-size:1.15rem;line-height:1.75;margin-bottom:1.2em;max-width:62ch}
+.p-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.p-links a{display:inline-flex;font-weight:600;text-decoration:none;background:var(--deep);color:var(--stone);padding:12px 22px;border-radius:999px;transition:background .25s,color .25s,transform .45s var(--spring)}
+.p-links a:hover{background:var(--rose);color:var(--night);transform:rotate(-3deg)}
 
 /* beeld */
-.p-gallery{padding:0 var(--pad) clamp(70px,10vw,140px);display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2vw,26px)}
+.p-gallery{padding:0 calc(var(--pad) + var(--gap)) clamp(70px,10vw,140px);display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,1.6vw,22px)}
 .fig{margin:0;position:relative}
 .fig.full{grid-column:1/-1}
-.fig .frame{overflow:hidden;background:#000;position:relative}
+.fig .frame{overflow:hidden;background:#000;position:relative;border-radius:var(--r-img)}
 .fig.light .frame{background:#fff}
 .fig img{display:block;width:100%;height:auto}
 .fig.cover .frame{aspect-ratio:4/3}
@@ -44,7 +42,7 @@ body.proj{background:var(--stone);color:var(--night)}
 .fig.wide .frame{aspect-ratio:16/9}
 .fig.wide img{height:100%;object-fit:contain}
 .fig.contain img{height:100%;object-fit:contain}
-.fig figcaption{font-style:italic;font-size:.98rem;margin:10px 0 0;opacity:.8}
+.fig figcaption{font-size:.95rem;margin:10px 4px 0;opacity:.7}
 /* een hoge foto links, twee gestapeld rechts */
 .fig.tall{grid-row:span 2;display:flex;flex-direction:column}
 .fig.tall .frame{flex:1;aspect-ratio:auto;min-height:420px}
@@ -56,12 +54,11 @@ body.proj{background:var(--stone);color:var(--night)}
 
 /* volgend project */
 .next{display:block;background:var(--night);color:var(--stone);padding:clamp(60px,9vw,130px) var(--pad);text-decoration:none}
-.next small{display:block;font-style:italic;font-size:1.05rem;margin-bottom:12px;color:var(--rose)}
+.next small{display:inline-block;font-size:.95rem;font-weight:600;margin-bottom:16px;color:var(--night);background:var(--rose);padding:5px 14px;border-radius:999px}
 .next strong{display:block;font-family:var(--head);font-weight:400;font-size:clamp(2.4rem,8.4vw,8.6rem);line-height:.95;letter-spacing:-.045em;transition:transform .5s var(--ease),color .3s}
 .next:hover strong,.next:focus-visible strong{transform:translateX(20px);color:var(--rose)}
-body.proj footer{border-top:1px solid rgba(229,232,226,.2)}
 
 @media(prefers-reduced-motion:reduce){
   .p-hero h1,.p-hero .lead{opacity:1;transform:none}
-  .p-hero-img{clip-path:inset(0)}
+  .p-hero-img{clip-path:none}
 }
