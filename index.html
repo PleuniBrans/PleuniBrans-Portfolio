@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261124b">
+<link rel="stylesheet" href="style.css?v=20261124c">
 </head>
 <body>
 
@@ -27,10 +27,19 @@
     <p>Vierdejaars Communication &amp; Multimedia Design aan de Hogeschool van Amsterdam.</p>
     <p class="status">Beschikbaar voor werk</p>
   </div>
-  <h1 aria-label="Pleuni Brans">
-    <span class="line"><span>Pleuni</span></span>
-    <span class="line"><span>Brans</span></span>
-  </h1>
+  <div class="hero-main">
+    <h1 aria-label="Pleuni Brans">
+      <span class="line"><span>Pleuni</span></span>
+      <span class="line"><span>Brans</span></span>
+    </h1>
+    <div class="stack" role="group" aria-label="Foto's uit mijn projecten">
+      <img class="card" style="--rot:7deg;--x:14%;--y:2%" src="assets/stapel/knmi.jpg" alt="KNMI-schermen op een telefoon">
+      <img class="card" style="--rot:-9deg;--x:0%;--y:22%" src="assets/stapel/haarlem.jpg" alt="Uitagenda-pagina voor Visit Haarlem">
+      <img class="card" style="--rot:4deg;--x:30%;--y:34%" src="assets/stapel/events.jpg" alt="Gevel van Events &amp; Planning">
+      <img class="card" style="--rot:-4deg;--x:8%;--y:48%" src="assets/stapel/shotjesbar.jpg" alt="Dé Shotjesbar op een evenement">
+      <p class="hint" aria-hidden="true">Sleep de foto's opzij</p>
+    </div>
+  </div>
 </header>
 
 <main>
@@ -83,7 +92,7 @@
 <section id="about" class="about">
   <h2 class="sec-title">Over mij</h2>
   <div class="about-grid">
-    <div class="about-photo"><div class="img"><img src="assets/about/aboutme-foto2%201.jpg" alt="Pleuni Brans" loading="lazy"></div></div>
+    <div class="about-photo"><span class="bloom" aria-hidden="true"></span><div class="img"><img src="assets/about/aboutme-foto2%201.jpg" alt="Pleuni Brans" loading="lazy"></div></div>
     <div class="about-text">
       <p>Ik ben Pleuni, vierdejaars student van de opleiding CMD op de Hogeschool van Amsterdam. Ik heb een brede interesse in UX, conceptontwikkeling en creatieve uitvoering. Van gebruikersonderzoek en prototyping in Figma tot creatieve concepten. Ik pak dingen breed op en leer het snelst door te doen.</p>
       <p>Ik hou van nieuwe dingen en onbekende omgevingen. Zo heb ik veel gereisd en een minor in filosofie afgerond in Istanbul. Vijf maanden in een onbekende stad, in een vakgebied buiten mijn comfortzone. Dit soort ervaringen, zoals werken in een internationale omgeving, geven mij frisse energie en inspiratie. Snel schakelen en open staan voor andere perspectieven.</p>
@@ -98,6 +107,7 @@
 </section>
 
 <section id="contact" class="contact">
+  <span class="bloom" aria-hidden="true"></span>
   <h2>Stuur me een mail</h2>
   <p class="sub">Ik zoek een plek waar ik kan bijdragen en blijven leren. Heb je een vraag, een klus of wil je kennismaken? Ik hoor het graag.</p>
   <a class="mail" href="mailto:pleuni.brans@gmail.com">Pleuni.brans@gmail.com</a>
@@ -110,6 +120,6 @@
 </main>
 
 <footer><span>© 2026 Brans Design</span><a class="tl" href="#" onclick="window.scrollTo({top:0});return false;">Naar boven</a></footer>
-<script src="script.js?v=20261124b"></script>
+<script src="script.js?v=20261124c"></script>
 </body>
 </html>
